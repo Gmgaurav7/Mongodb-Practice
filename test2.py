@@ -72,7 +72,12 @@ collection = client["Inventory"]["Table"]
 #d = collection.find({'status':{'$gt':'D'}})
 #d = collection.find({'status': {'$gte': 'D'}})
 #d = collection.find({'status': {'$lte': 'D'}})
-d = collection.find({'status': {'$lt': 'D'}})
+#d = collection.find({'status': {'$lt': 'D'}})
+#d = collection.find({'qty': {'$gte':70}})
+#d = collection.find({'item':{'$in': ['canvas' , 'journal' , 'mousepad']} , 'qty' :{'$lte':70}})
+d = collection.find()
+
+
 
 for i in d:
     print(i)
